@@ -1,0 +1,20 @@
+Index: src/Application.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Application.java b/src/View/Application.java
+rename from src/Application.java
+rename to src/View/Application.java
+--- a/src/Application.java	
++++ b/src/View/Application.java	
+@@ -1,2 +1,9 @@
++package View;
++
++import javax.swing.*;
++
+ public class Application {
++
++    private JMenuItem Reset;
++    private JMenuItem Undo;
+ }
