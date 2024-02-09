@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f778e718-9c75-4e06-8fae-8f232972fb42" name="Changes" comment="">
+    <list default="true" id="f778e718-9c75-4e06-8fae-8f232972fb42" name="Changes" comment="Model class&#10;Java Doc&#10;Comments for Model">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Model.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Model.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/View/Application.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/Application.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/View/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/Application.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -63,6 +61,27 @@
       <option name="presentableId" value="Default" />
       <updated>1707235430520</updated>
     </task>
+    <task id="LOCAL-00001" summary="Model class&#10;Java Doc&#10;Comments for Model">
+      <option name="closed" value="true" />
+      <created>1707496545290</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1707496545290</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Model class&#10;Java Doc&#10;Comments for Model">
+      <option name="closed" value="true" />
+      <created>1707496656429</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1707496656429</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Model class&#10;Java Doc&#10;Comments for Model" />
+    <option name="LAST_COMMIT_MESSAGE" value="Model class&#10;Java Doc&#10;Comments for Model" />
   </component>
 </project>
