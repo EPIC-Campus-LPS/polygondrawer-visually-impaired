@@ -4,10 +4,7 @@ import javax.swing.*;
 import javax.swing.border.Border;
 import javax.swing.border.EmptyBorder;
 import java.awt.BorderLayout;
-import java.awt.event.InputEvent;
-import java.awt.event.KeyEvent;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
+import java.awt.event.*;
 
 import static java.awt.Color.*;
 
@@ -71,6 +68,12 @@ public class Application extends JFrame {
         Reset = new JMenuItem("Reset"); // defines the item as the reset button
         Reset.setAccelerator(KeyStroke.getKeyStroke("control N")); // defines what happens if the option is selected
         Polygon.add(Reset); // tells the frame which object to look for the reset option
+        Reset.addActionListener((new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                new ResetController(Application.this, model).reset();
+            }
+        }));
 
         Edit = new JMenu("Edit"); // defines the edit menu
         coolBar.add(Edit); // tells the frame which object to look for the edit menu
@@ -78,13 +81,22 @@ public class Application extends JFrame {
         Undo = new JMenuItem("Undo"); // defines the item as the undo button
         Undo.setAccelerator(KeyStroke.getKeyStroke("control Z")); // defines what happens if the option is selected
         Edit.add(Undo); // tells the frame which object to look for the undo option
+        //For Nathan to do later
+        Undo.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                new UndoController(Application.this, model).removeLastPoint();
+            }
+        });
 
         contentPane = new PolygonDrawer(model); // defines the content pane as a PolygonDrawer, with "model" as an argument
         contentPane.addMouseListener(new MouseAdapter() {
             public void mouseClicked(MouseEvent e) {
-
-                new AddPointController(Application.this, model).addPoint(e.getPoint());
-
+                //Makes new polygon when right click
+                /*if (SwingUtilities.isRightMouseButton(e)) {
+                    new CompletePolygonController(Application.this, model).complete();
+                }*/
+                    new AddPointController(Application.this, model).addPoint(e.getPoint());
             }
         });
         contentPane.setBorder(new EmptyBorder(5, 5, 5, 5)); // Defines the borders of the pane
@@ -94,23 +106,20 @@ public class Application extends JFrame {
         setContentPane(contentPane); // tells the frame which object to look for the content
 
     }
+
     /**
-     *
      * No-argument constructor so that Java doesn't get pissy
-     *
      */
     Application() {
 
-        this (new Model());
+        this(new Model());
 
     }
 
     /**
-     *
      * Returns the Undo object
      *
      * @return Undo - undo option object
-     *
      */
     public JMenuItem getUndoMenuItem() {
 
@@ -119,11 +128,9 @@ public class Application extends JFrame {
     }
 
     /**
-     *
      * Returns the Reset object
      *
      * @return Reset - reset option object
-     *
      */
     public JMenuItem getResetMenuItem() {
 
@@ -132,11 +139,9 @@ public class Application extends JFrame {
     }
 
     /**
-     *
      * Returns the contentPane object
      *
      * @return contentPane - where the content of the window is contained
-     *
      */
     public JPanel getPolygonDrawer() {
 
