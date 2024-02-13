@@ -77,10 +77,10 @@ public class Application extends JFrame {
         Edit.add(Undo); // tells the frame which object to look for the undo option
 
         contentPane = new PolygonDrawer(model); // defines the content pane as a PolygonDrawer, with "model" as an argument
-        contentPane.addMouseListener(new MouseAdapter() {
-            public void mouseClicked(MouseEvent e) {
+        contentPane.addMouseListener(new MouseAdapter() { // listens for mouse clicks
+            public void mouseClicked(MouseEvent e) { // when the mouse clicks
 
-                new AddPointController(Application.this, model).addPoint(e.getPoint());
+                new AddPointController(Application.this, model).addPoint(e.getPoint()); // create a point controller and add a point when the mouse is clicked
 
             }
         });

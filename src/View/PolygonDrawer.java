@@ -28,6 +28,13 @@ public class PolygonDrawer extends JPanel {
         this.model = m;
     }
 
+    /**
+     *
+     * Actually puts the things on the visual application
+     *
+     * @param g the <code>Graphics</code> object to protect
+     *
+     */
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
 
