@@ -25,6 +25,7 @@ public class Model {
 
     /**
      * Returns the total number of polygons
+     *
      * @return
      */
     public int size() {
@@ -44,6 +45,7 @@ public class Model {
 
     /**
      * Adds a polygon to the list
+     *
      * @param poly
      */
     public void addPolygon(Polygon poly) {
@@ -52,14 +54,14 @@ public class Model {
     }
 
     public void makeCurrent(Polygon poly) {
-        if(list.contains(poly)){
+        if (list.contains(poly)) {
             current = poly;
         } else {
             throw new NoSuchElementException("No Such Vertex");
         }
     }
 
-    public void unselectPolygon(){
+    public void unselectPolygon() {
         current = null;
     }
 

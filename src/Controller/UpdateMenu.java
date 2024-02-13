@@ -22,9 +22,6 @@ public class UpdateMenu {
                 app.getUndoMenuItem().setText("Remove last Polygon");
 
             }
-
         }
-
     }
-
 }
