@@ -1,4 +1,6 @@
 import java.awt.EventQueue;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 
 /**
  *
@@ -14,9 +16,18 @@ public class Main {
 
         // instantiates the Model
         Model m = new Model();
-
         Application frame = new Application(m); // creates the window
         frame.setVisible(true); //  makes the window visible
+
+        frame.addWindowListener(new WindowAdapter() {
+
+            @Override
+            public void windowClosing(WindowEvent e) {
+                if(new QuitController().confrim(frame)){
+                    frame.dispose();
+                }
+            }
+        });
 
     }
 }

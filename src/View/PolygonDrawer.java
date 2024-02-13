@@ -35,7 +35,7 @@ public class PolygonDrawer extends JPanel {
         while (it.hasNext()) {
             Polygon poly = it.next();
 
-            g.setColor(Color.black);
+            g.setColor(Color.yellow);
             if(model.isSelected(poly)){
                 g.setColor(Color.white);
             }

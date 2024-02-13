@@ -56,7 +56,7 @@ public class Application extends JFrame {
         super();
         this.model = m; // defines model
         setTitle("Polygon Drawing"); // sets the title of the application
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // defines how the program stops running
+        setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE); // defines how the program stops running
         setBounds(100, 100, 450, 300); // sets the size of the window frame
 
         coolBar = new JMenuBar(); // defines the menu bar
@@ -93,10 +93,11 @@ public class Application extends JFrame {
         contentPane.addMouseListener(new MouseAdapter() {
             public void mouseClicked(MouseEvent e) {
                 //Makes new polygon when right click
-                /*if (SwingUtilities.isRightMouseButton(e)) {
+                if (SwingUtilities.isRightMouseButton(e)) {
                     new CompletePolygonController(Application.this, model).complete();
-                }*/
+                }else {
                     new AddPointController(Application.this, model).addPoint(e.getPoint());
+                }
             }
         });
         contentPane.setBorder(new EmptyBorder(5, 5, 5, 5)); // Defines the borders of the pane
