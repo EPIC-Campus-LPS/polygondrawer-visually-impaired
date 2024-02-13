@@ -51,6 +51,13 @@ public class Model {
         list.add(poly);
     }
 
+    /**
+     *
+     *
+     *
+     * @param poly - polygon object
+     *
+     */
     public void makeCurrent(Polygon poly) {
         if(list.contains(poly)){
             current = poly;
@@ -59,14 +66,34 @@ public class Model {
         }
     }
 
+    /**
+     *
+     * Deselects the current point
+     *
+     */
     public void unselectPolygon(){
         current = null;
     }
 
+    /**
+     *
+     * Returns the selected point
+     *
+     * @return selected - the selected point
+     *
+     */
     public Optional<Polygon> getSelected() {
         return Optional.ofNullable(current);
     }
 
+    /**
+     *
+     * Determines whether a passed point is selected
+     *
+     * @param poly - a polygon object
+     * @return boolean
+     *
+     */
     public boolean isSelected(Polygon poly) {
         return (poly != null && poly.equals(current));
     }

@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f778e718-9c75-4e06-8fae-8f232972fb42" name="Changes" comment="now work :D">
-      <change afterPath="$PROJECT_DIR$/src/Controller/ResetController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/UndoController.java" afterDir="false" />
+    <list default="true" id="f778e718-9c75-4e06-8fae-8f232972fb42" name="Changes" comment="no work">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/View/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/PolygonDrawer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/PolygonDrawer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,15 +107,7 @@
       <option name="project" value="LOCAL" />
       <updated>1707841435406</updated>
     </task>
-    <task id="LOCAL-00006" summary="now work :D">
-      <option name="closed" value="true" />
-      <created>1707842725792</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1707842725792</updated>
-    </task>
-    <option name="localTasksCounter" value="7" />
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -135,7 +126,6 @@
     <MESSAGE value="Fixed issues with our pushes getting messed up" />
     <MESSAGE value="PolygonDrawer" />
     <MESSAGE value="no work" />
-    <MESSAGE value="now work :D" />
-    <option name="LAST_COMMIT_MESSAGE" value="now work :D" />
+    <option name="LAST_COMMIT_MESSAGE" value="no work" />
   </component>
 </project>
