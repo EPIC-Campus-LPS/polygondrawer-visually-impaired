@@ -51,47 +51,22 @@ public class Model {
         list.add(poly);
     }
 
-    /**
-     *
-     * Makes the latest Point created the current point selected
-     *
-     * @param poly - Polygon object
-     *
-     */
     public void makeCurrent(Polygon poly) {
-        if(list.contains(poly)){ // if the polygon is there
+        if(list.contains(poly)){
             current = poly;
-        } else { // if the polygon isn't there (duh)
+        } else {
             throw new NoSuchElementException("No Such Vertex");
         }
     }
 
-    /**
-     *
-     * deselects anything
-     *
-     */
     public void unselectPolygon(){
         current = null;
     }
 
-    /**
-     *
-     * @return selected - the selected point
-     *
-     */
     public Optional<Polygon> getSelected() {
         return Optional.ofNullable(current);
     }
 
-    /**
-     *
-     * Determines if the passed polygon is selected
-     *
-     * @param poly - current polygon
-     * @return boolean - whether the polygon is selected
-     *
-     */
     public boolean isSelected(Polygon poly) {
         return (poly != null && poly.equals(current));
     }

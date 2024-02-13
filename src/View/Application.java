@@ -1,12 +1,15 @@
 // import statements
 
 import javax.swing.*;
+import javax.swing.border.Border;
 import javax.swing.border.EmptyBorder;
 import java.awt.BorderLayout;
 import java.awt.event.InputEvent;
 import java.awt.event.KeyEvent;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+
+import static java.awt.Color.*;
 
 /**
  * Configures the window and elements of the application
@@ -86,6 +89,7 @@ public class Application extends JFrame {
         });
         contentPane.setBorder(new EmptyBorder(5, 5, 5, 5)); // Defines the borders of the pane
         contentPane.setLayout(new BorderLayout(0, 0)); // defines the size of the gaps between elements
+        contentPane.setBackground(black);
 
         setContentPane(contentPane); // tells the frame which object to look for the content
 
