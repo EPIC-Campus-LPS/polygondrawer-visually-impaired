@@ -35,7 +35,13 @@ public class PolygonDrawer extends JPanel {
         while (it.hasNext()) {
             Polygon poly = it.next();
 
-            if (poly.npoints <= 3) {
+            g.setColor(Color.black);
+            if(model.isSelected(poly)){
+                g.setColor(Color.white);
+            }
+
+            //draw line if close
+            if (poly.npoints >= 3) {
                 for (int i = 0; i < poly.npoints - 1; i++) {
                     g.drawLine(poly.xpoints[i], poly.ypoints[i], poly.xpoints[i + 1], poly.ypoints[i + 1]);
                 }
