@@ -1,6 +1,7 @@
 import java.awt.Polygon;
 import java.util.LinkedList;
 import java.util.Iterator;
+import java.util.NoSuchElementException;
 import java.util.Optional;
 
 /**
@@ -53,6 +54,8 @@ public class Model {
     public void makeCurrent(Polygon poly) {
         if(list.contains(poly)){
             current = poly;
+        } else {
+            throw new NoSuchElementException("No Such Vertex");
         }
     }
 
@@ -61,11 +64,10 @@ public class Model {
     }
 
     public Optional<Polygon> getSelected() {
-        Optional<Polygon> option = Optional.ofNullable(current);
-        return option;
+        return Optional.ofNullable(current);
     }
 
     public boolean isSelected(Polygon poly) {
-        return (poly != null && poly == current);
+        return (poly != null && poly.equals(current));
     }
 }

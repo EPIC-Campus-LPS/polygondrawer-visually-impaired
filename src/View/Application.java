@@ -5,6 +5,8 @@ import javax.swing.border.EmptyBorder;
 import java.awt.BorderLayout;
 import java.awt.event.InputEvent;
 import java.awt.event.KeyEvent;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
 /**
  * Configures the window and elements of the application
@@ -75,8 +77,15 @@ public class Application extends JFrame {
         Edit.add(Undo); // tells the frame which object to look for the undo option
 
         contentPane = new PolygonDrawer(model); // defines the content pane as a PolygonDrawer, with "model" as an argument
+        contentPane.addMouseListener(new MouseAdapter() {
+            public void mouseClicked(MouseEvent e) {
+
+                new AddPointController(Application.this, model).addPoint(e.getPoint());
+
+            }
+        });
         contentPane.setBorder(new EmptyBorder(5, 5, 5, 5)); // Defines the borders of the pane
-        contentPane.setLayout(new BorderLayout(0, 0)); // defins the size of the gaps between elements
+        contentPane.setLayout(new BorderLayout(0, 0)); // defines the size of the gaps between elements
 
         setContentPane(contentPane); // tells the frame which object to look for the content
 
@@ -125,7 +134,7 @@ public class Application extends JFrame {
      * @return contentPane - where the content of the window is contained
      *
      */
-    public PolygonDrawer getPolygonDrawer() {
+    public JPanel getPolygonDrawer() {
 
         return contentPane;
 
