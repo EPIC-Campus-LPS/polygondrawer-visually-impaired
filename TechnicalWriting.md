@@ -16,5 +16,5 @@ The Polygon Drawer application is used to draw images using polygons.  This is c
 12. Open Intellij
 
 # Download ZIP file
-1. 
+1.  If you are opening Intellij for the first time you should be seeing one of two screens![img_4.png](img_4.png) ![img_7.png](img_7.png)
 # Clone using link
