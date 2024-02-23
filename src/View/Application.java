@@ -93,10 +93,11 @@ public class Application extends JFrame {
         contentPane.addMouseListener(new MouseAdapter() {
             public void mouseClicked(MouseEvent e) {
                 //Makes new polygon when right click
-                /*if (SwingUtilities.isRightMouseButton(e)) {
+                if (SwingUtilities.isRightMouseButton(e)) {
                     new CompletePolygonController(Application.this, model).complete();
-                }*/
+                } else {
                     new AddPointController(Application.this, model).addPoint(e.getPoint());
+                }
             }
         });
         contentPane.setBorder(new EmptyBorder(5, 5, 5, 5)); // Defines the borders of the pane
